@@ -1,0 +1,35 @@
+// Hesap Makinesi 
+
+actor hesap_makinesi{
+var hucre: Int =0;
+// toplama işlemi 
+// fonksyion yazdık 
+public func toplama (sayi: Int ): async Int{
+  hucre += sayi;
+  hucre
+
+}; 
+// çıkarma işlemi
+public func cikarma (sayi: Int): async Int{
+  hucre -= sayi;
+  hucre
+};
+// çarpma işlemi
+public func carpma (sayi: Int): async Int{
+  hucre *= sayi;
+  hucre
+};
+// bölme işlemi
+public func bolme (sayi: Int): async ?Int{
+  if (sayi == 0){
+    null
+  }else{
+    hucre /= sayi;
+    ?hucre
+  };
+};
+// temizleme işlemi
+public func temizle() : async() {
+  hucre := 0;
+};
+};
